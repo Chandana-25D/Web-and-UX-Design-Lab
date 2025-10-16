@@ -1,0 +1,148 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback Form</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+      max-width: 650px;
+      width: 100%;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 35px;
+      color: #333;
+      font-size: 2rem;
+    }
+
+    label {
+      display: block;
+      margin-top: 22px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #222;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      margin-top: 8px;
+      border: 1px solid #bbb;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #111;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #764ba2;
+      outline: none;
+    }
+
+    .radio-group, .checkbox-group {
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    .radio-group label, .checkbox-group label {
+      display: inline-block;
+      margin-right: 20px;
+      font-weight: normal;
+      color: #333;
+    }
+
+    button {
+      margin-top: 35px;
+      width: 100%;
+      padding: 16px;
+      background: #4ba288;
+      color: #fffffff6;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.5s;
+    }
+
+    button:hover {
+      background: #3c9167;
+    }
+
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 20px;
+      }
+
+      h3 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>🌟 We Value Your Feedback</h2>
+    <form action="/submit-feedback" method="post">
+      
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label>Rate Your Experience</label>
+      <div class="radio-group">
+        <label><input type="radio" name="rating" value="Excellent" /> Excellent</label>
+        <label><input type="radio" name="rating" value="Good" /> Good</label>
+        <label><input type="radio" name="rating" value="Average" /> Average</label>
+        <label><input type="radio" name="rating" value="Poor" /> Poor</label>
+      </div>
+
+      <label>What did you like?</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="likes" value="Design" /> Design</label>
+        <label><input type="checkbox" name="likes" value="Speed" /> Speed</label>
+        <label><input type="checkbox" name="likes" value="Support" /> Support</label>
+      </div>
+
+      <label for="improve">Area to Improve</label>
+      <select id="improve" name="improve">
+        <option value="">--Choose One--</option>
+        <option value="UI">User Interface</option>
+        <option value="Performance">Performance</option>
+        <option value="Features">Features</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="comments">Additional Comments</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="Share your thoughts..."></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+
+</body>
+</html>
