@@ -1,0 +1,151 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Float vs Grid: Stylish Layout</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #ff6f61, #ffcc70);
+      color: #fff;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      font-weight: 300;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.8em;
+      margin: 50px 0 20px;
+      color: #ff6f61;
+    }
+
+    .float-container {
+      overflow: hidden;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+    }
+
+    .float-box {
+      width: 48%;
+      float: left;
+      padding: 20px;
+      margin: 1%;
+      background: linear-gradient(to bottom right, #fceabb, #f8b500);
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      color: #222;
+    }
+
+    .float-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+    }
+
+    .grid-box {
+      background: linear-gradient(to bottom right, #d4fc79, #96e6a1);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      color: #222;
+    }
+
+    .grid-box:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: linear-gradient(to right, #ffcc70, #ff6f61);
+      color: #fff;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      .float-box {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+      }
+
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Float vs Grid Layout</h1>
+    <p>Two powerful CSS techniques, beautifully styled</p>
+  </header>
+
+  <div class="section-title">Float-Based Layout</div>
+  <div class="float-container">
+    <div class="float-box">
+      <h2>Left Column</h2>
+      <p>Floats are a classic method for creating multi-column layouts. They require careful width management and clearfix techniques, but they’re widely supported and simple to implement.</p>
+    </div>
+    <div class="float-box">
+      <h2>Right Column</h2>
+      <p>This column floats beside the left one. On smaller screens, both columns stack vertically for better readability and accessibility.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Grid-Based Layout</div>
+  <div class="grid-container">
+    <div class="grid-box">
+      <h2>Left Column</h2>
+      <p>CSS Grid is a modern layout system that allows for precise control over rows and columns. It’s responsive, flexible, and ideal for complex designs.</p>
+    </div>
+    <div class="grid-box">
+      <h2>Right Column</h2>
+      <p>Grid layouts adapt seamlessly to screen sizes. With just a few lines of code, you can create elegant, responsive designs without relying on floats or flexbox.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Layout Lab. Crafted with color, code, and creativity.
+  </footer>
+</body>
+</html>
