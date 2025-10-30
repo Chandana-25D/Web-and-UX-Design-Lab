@@ -1,0 +1,248 @@
+<html>
+<head>
+  <title>Chandana | Personal Webpage</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent: #b07a6c;
+      --bg-gradient: linear-gradient(135deg,#fbc2eb 0% , #a6c1ee 100%);
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-gradient);
+      }
+
+    header {
+      text-align: center;
+      padding: 3rem;
+    }
+
+    .avatar {
+      width: 280px;
+      height: 280px;
+      margin: 0 auto 1.5rem;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid var(--accent);
+      transition: transform 0.3s ease;
+      }
+
+    .avatar:hover{
+        transform: scale(1.05);
+      }
+    
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.6rem;
+      background: linear-gradient(to right, hsl(215, 83%, 65%), #ebe644);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+       }
+
+    h2.welcome {
+      font-size: 2rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 0.8rem;
+      animation: fadeIn 2s ease-in;
+    }
+
+    p.tagline {
+      font-size: 1.5rem;
+      color: #fefefe;
+      opacity: 0.95;
+      }
+
+      @keyframes fadeIn 
+      {
+        from {opacity:0;}
+        to {opacity: 1;}
+      }
+
+      .glass-box {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2.5rem;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 25px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .glass-box:hover {
+      transform: scale(1.01);
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+      display: inline-block;
+      border-bottom: 3px solid var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    section p {
+      line-height: 1.7;
+      color: #454340;
+    }
+
+    ul {
+      padding-left: 1rem;
+    }
+
+     ul li {
+      margin-bottom: 0.8rem;
+      position: relative;
+      padding-left: 1rem;
+      font-size: 1rem;
+    }
+
+    ul li::before {
+      content: '🌟';
+      position: absolute;
+      left: 0;
+    }
+   
+    .skills span {
+      display: inline-block;
+      background: linear-gradient(45deg, #4a00e0, #8e2de2);
+      color: #f3eded;
+      padding: 0.5rem 1.1rem;
+      margin: 0.4rem;
+      border-radius: 25px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 0 10px rgba(69, 164, 215, 0.613);
+      transition: all 0.3s ease;
+    }
+
+    .skills span:hover {
+      transform: scale(1.15);
+      background: linear-gradient(45deg, #7322b0, #6245a9);
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.7rem 1.4rem;
+      background: linear-gradient(45deg, #4a00e0, #8e2de2);
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(142,45,226,0.3);
+    }
+
+    .contact a:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 15px rgba(142,45,226,0.5);
+    }
+      footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #222;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+   <body>
+  <header>
+    <div class="avatar">
+      <img src="https://cdn.basedlabs.ai/b2445342-ad33-459f-afee-e31c9ad772c9" alt="Professional photo of Chandana" />
+    </div>
+    <h2 class="welcome">Hello, I’m Chandana 👋</h2>
+    <h1>Welcome to My Creative Space</h1>
+    <p class="tagline">Crafting code with soul ✨ Designing dreams with pixels 🎨</p>
+  </header>
+
+  <div class="glass-box">
+    <section>
+      <h2>About Me</h2>
+      <p>I’m a multidisciplinary creative technologist with a passion for building digital experiences that feel alive. My journey began with sketchbooks and storyboards, evolved through code and design, and now lives at the intersection of art and engineering.</p>
+      <p>I believe in the power of thoughtful design, emotional storytelling, and seamless interaction to move people. Whether I’m animating a micro-interaction, prototyping a VR interface, or architecting a scalable front-end system, I bring curiosity, empathy, and elegance to every project.</p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>EchoVerse</strong> – A voice-reactive art gallery that transforms whispers into waves of color and motion.</li>
+        <li><strong>CodeCanvas</strong> – A generative art playground for remixing algorithmic patterns.</li>
+        <li><strong>Pulse</strong> – A real-time dashboard that visualizes global sentiment with NLP and D3.js.</li>
+        <li><strong>NeonScroll</strong> – A cinematic storytelling engine with ambient soundscapes.</li>
+        <li><strong>MindMesh</strong> – An interactive knowledge map that visualizes connected ideas.</li>
+      </ul>
+    </section>
+
+    <section class="skills">
+      <h2>Skills</h2>
+      <div><strong>Front-End Magic:</strong></div>
+      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Vue</span>
+
+      <div><strong>Creative Tools:</strong></div>
+      <span>Figma</span><span>Adobe XD</span><span>GSAP</span><span>Three.js</span><span>WebGL</span>
+
+      <div><strong>Back-End & Data:</strong></div>
+      <span>Node.js</span><span>Express</span><span>MongoDB</span><span>Firebase</span>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Bachelor of Interaction Design</strong> – Design Institute<br>
+          Focused on human-centered design, motion theory, and digital storytelling.</li>
+        <li><strong>Creative Coding Bootcamp</strong> – SuperHi<br>
+          Explored generative art and interactive storytelling.</li>
+        <li><strong>Certificate in UX Psychology</strong> – Coursera<br>
+          Studied cognitive load, visual hierarchy, and behavioral design patterns.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Testimonials</h2>
+      <ul>
+        <li>“They don’t just build websites—they compose symphonies of interaction.” – <em>Creative Director, DreamLab</em></li>
+        <li>“A rare blend of technical brilliance and artistic intuition.” – <em>Startup Founder</em></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Let’s create something unforgettable. Whether it’s a collaboration, a conversation, or a cup of coffee — I’d love to hear from you.</p>
+      <div class="contact">
+        <a href="mailto:yourname@gmail.com" target="_blank">Gmail</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>© 2025 Chandana | Designed with 💜 and creativity</footer>
+</body>
+</html> 
+
+
+
